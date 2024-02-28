@@ -26,10 +26,10 @@ public class SeleniumTests {
         driver.get("https://automationexercise.com/");
 
         //Instantiating SignUpPage
-        final LandingPage signUpPage = new LandingPage(driver);
+        final LandingPage landingPage = new LandingPage(driver);
 
         //Click Sign up/Login Page
-        signUpPage.clickSignUpLink();
+        landingPage.clickSignUpLink();
 
             //Test URL Location
         String actual_URL = driver.getCurrentUrl();
@@ -38,5 +38,11 @@ public class SeleniumTests {
 
         //__Sign up Process__
         // Make Driver Click name field
+
+        //Instantiate loginSignUpPage
+        final LoginSignUpPage loginSignUpPage = new LoginSignUpPage(driver);
+
+        //Click Name field and begin sign up process
+        loginSignUpPage.clickNameField();
     }
 }

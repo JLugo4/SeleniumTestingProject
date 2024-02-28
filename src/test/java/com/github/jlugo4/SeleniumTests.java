@@ -3,6 +3,7 @@ package com.github.jlugo4;
 import com.github.jlugo4.Pages.LandingPage;
 import com.github.jlugo4.Pages.LoginSignUpPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -44,5 +45,11 @@ public class SeleniumTests {
 
         //Click Name field and begin sign up process
         loginSignUpPage.clickNameField();
+
+        //Create SignInName
+        String signInName = RandomStringUtils.randomAlphabetic(10, 10).toLowerCase();
+
+        //Send Random signInName to nameField
+        loginSignUpPage.enterName(signInName);
     }
 }

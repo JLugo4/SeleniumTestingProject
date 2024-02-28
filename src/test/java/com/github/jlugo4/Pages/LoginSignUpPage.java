@@ -2,6 +2,7 @@ package com.github.jlugo4.Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class LoginSignUpPage {
 
@@ -18,4 +19,9 @@ public class LoginSignUpPage {
     public void clickNameField()
     {driver.findElement(SignUpName).click();}
 
+    public void enterName(String name){
+        WebElement nameField = driver.findElement(SignUpName);
+        nameField.clear();
+        nameField.sendKeys(name);
+    }
 }

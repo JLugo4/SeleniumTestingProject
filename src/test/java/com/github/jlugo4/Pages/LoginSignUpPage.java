@@ -9,7 +9,7 @@ public class LoginSignUpPage {
     private WebDriver driver;
 
     //Initialize SignUpName
-    private By SignUpName = By.cssSelector("input[data-qa*='sign-name']");
+    private By SignUpName = By.cssSelector("input[data-qa*='signup-name']");
 
     //Instantiate WebDriver
     public LoginSignUpPage(WebDriver driver){this.driver = driver;}

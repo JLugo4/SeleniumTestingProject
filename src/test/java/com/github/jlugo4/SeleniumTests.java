@@ -2,6 +2,7 @@ package com.github.jlugo4;
 
 import com.github.jlugo4.Pages.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -28,5 +29,10 @@ public class SeleniumTests {
 
         //Click Sign up/Login Page
         signUpPage.clickSignUpLink();
+
+            //Test URL Location
+        String actual_URL = driver.getCurrentUrl();
+        String expected_URL = "https://automationexercise.com/login";
+        Assert.assertEquals(expected_URL, actual_URL);
     }
 }

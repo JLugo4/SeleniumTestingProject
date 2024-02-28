@@ -1,5 +1,6 @@
 package com.github.jlugo4;
 
+import com.github.jlugo4.Pages.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -21,5 +22,11 @@ public class SeleniumTests {
 
         //Navigate to the web page
         driver.get("https://automationexercise.com/");
+
+        //Instantiating SignUpPage
+        final LandingPage signUpPage = new LandingPage(driver);
+
+        //Click Sign up/Login Page
+        signUpPage.clickSignUpLink();
     }
 }

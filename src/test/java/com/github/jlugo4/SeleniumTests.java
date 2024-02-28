@@ -1,6 +1,7 @@
 package com.github.jlugo4;
 
 import com.github.jlugo4.Pages.LandingPage;
+import com.github.jlugo4.Pages.LoginSignUpPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.junit.Test;
@@ -34,5 +35,8 @@ public class SeleniumTests {
         String actual_URL = driver.getCurrentUrl();
         String expected_URL = "https://automationexercise.com/login";
         Assert.assertEquals(expected_URL, actual_URL);
+
+        //__Sign up Process__
+        // Make Driver Click name field
     }
 }

@@ -2,8 +2,8 @@ package com.github.jlugo4;
 
 import com.github.jlugo4.Pages.LandingPage;
 import com.github.jlugo4.Pages.LoginSignUpPage;
+import com.github.jlugo4.Pages.MetaDataUtility;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -46,10 +46,19 @@ public class SeleniumTests {
         //Click Name field and begin sign up process
         loginSignUpPage.clickNameField();
 
+        //Meta-data method class?
         //Create SignInName
-        String signInName = RandomStringUtils.randomAlphabetic(10, 10).toLowerCase();
+        String signInName = MetaDataUtility.createTempName();
 
         //Send Random signInName to nameField
         loginSignUpPage.enterName(signInName);
+
+        //Select the email field
+        loginSignUpPage.clickEmailField();
+
+        String signInEmail = MetaDataUtility.createEmail();
+
+        loginSignUpPage.enterEmail(signInEmail);
+    
     }
 }

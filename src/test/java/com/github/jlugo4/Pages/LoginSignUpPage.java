@@ -10,18 +10,30 @@ public class LoginSignUpPage {
     private WebDriver driver;
 
     //Initialize SignUpName
-    private By SignUpName = By.cssSelector("input[data-qa*='signup-name']");
+    final private By SignUpNameField = By.cssSelector("input[data-qa*='signup-name']");
+
+    final private By EmailField = By.cssSelector("input[data-qa*='signup-email']");
 
     //Instantiate WebDriver
     public LoginSignUpPage(WebDriver driver){this.driver = driver;}
 
     // Click name field method
     public void clickNameField()
-    {driver.findElement(SignUpName).click();}
+    {driver.findElement(SignUpNameField).click();}
 
     public void enterName(String name){
-        WebElement nameField = driver.findElement(SignUpName);
+        WebElement nameField = driver.findElement(SignUpNameField);
         nameField.clear();
         nameField.sendKeys(name);
+    }
+
+    public void clickEmailField(){
+        driver.findElement(EmailField).click();
+    }
+
+    public void enterEmail(String email){
+        WebElement emailField = driver.findElement(EmailField);
+        emailField.clear();
+        emailField.sendKeys(email);
     }
 }

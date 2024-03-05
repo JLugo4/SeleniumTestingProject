@@ -3,6 +3,7 @@ package com.github.jlugo4;
 import com.github.jlugo4.Pages.LandingPage;
 import com.github.jlugo4.Pages.LoginSignUpPage;
 import com.github.jlugo4.Pages.MetaDataUtility;
+import com.github.jlugo4.Pages.SignUpPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.junit.Test;
@@ -26,7 +27,7 @@ public class SeleniumTests {
         //Navigate to the web page
         driver.get("https://automationexercise.com/");
 
-        //Instantiating SignUpPage
+        //Instantiating LandingPage
         final LandingPage landingPage = new LandingPage(driver);
 
         //Click Sign up/Login Page
@@ -56,9 +57,19 @@ public class SeleniumTests {
         //Select the email field
         loginSignUpPage.clickEmailField();
 
+        //Create SignInEmail
         String signInEmail = MetaDataUtility.createEmail();
 
+        //Send Random Email to emailField
         loginSignUpPage.enterEmail(signInEmail);
-    
+
+        //Select and Click Sign up Button
+        loginSignUpPage.clickSignUpButton();
+
+        //Instantiate SignUpPage
+        final SignUpPage signUpPage = new SignUpPage(driver);
+
+        //Select
+        signUpPage.clickPassWordField();
     }
 }

@@ -11,4 +11,8 @@ public class MetaDataUtility {
     public static String createEmail(){
         return createTempName() + "@gmail.com";
     }
+
+    public static String createPassword(){
+        return createTempName();
+    }
 }

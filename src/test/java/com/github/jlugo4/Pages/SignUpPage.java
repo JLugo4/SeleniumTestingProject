@@ -2,6 +2,7 @@ package com.github.jlugo4.Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class SignUpPage {
     private WebDriver driver;
@@ -12,5 +13,12 @@ public class SignUpPage {
 
     public void clickPassWordField(){
         driver.findElement(PasswordField).click();
+    }
+
+    public void enterPassword(String password){
+        WebElement passwordField = driver.findElement(PasswordField);
+        passwordField.clear();
+        passwordField.sendKeys(password);
+
     }
 }

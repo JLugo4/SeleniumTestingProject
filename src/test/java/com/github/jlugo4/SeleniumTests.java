@@ -69,7 +69,13 @@ public class SeleniumTests {
         //Instantiate SignUpPage
         final SignUpPage signUpPage = new SignUpPage(driver);
 
-        //Select
+        //Select Password Field
         signUpPage.clickPassWordField();
+
+        //Create password
+        String password = MetaDataUtility.createPassword();
+
+        //Send password to Password field
+        signUpPage.enterPassword(password);
     }
 }

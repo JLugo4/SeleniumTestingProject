@@ -7,6 +7,7 @@ import com.github.jlugo4.Pages.SignUpPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -78,6 +79,12 @@ public class SeleniumTests {
         //Send password to Password field
         signUpPage.enterPassword(password);
 
+        // Create a JavascriptExecutor object
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        // Scroll down the page by a specific number of pixels (e.g., 500 pixels)
+        js.executeScript("window.scrollBy(0, 500)");
+        
         //Select FirstName field
         signUpPage.clickFirstNameField();
 

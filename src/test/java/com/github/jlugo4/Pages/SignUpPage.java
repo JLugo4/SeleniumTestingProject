@@ -13,6 +13,9 @@ public class SignUpPage {
     //Initializing FirstNameField
     final private By FirstNameField = By.cssSelector("input[data-qa*='first_name']");
 
+    //Initializing LastNameField
+    final private By LastNameField = By.cssSelector("input[data-qa*='last_name']");
+
     //Initializing SignUpPage
     public SignUpPage(WebDriver driver){this.driver = driver;}
 
@@ -39,4 +42,13 @@ public class SignUpPage {
         FirstName.sendKeys(firstName);
     }
 
+    public void clickLastNameField(){
+        driver.findElement(LastNameField).click();
+    }
+
+    public void enterLastName(String lastName){
+        WebElement LastName = driver.findElement(LastNameField);
+        LastName.clear();
+        LastName.sendKeys(lastName);
+    }
 }

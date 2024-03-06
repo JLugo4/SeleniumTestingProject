@@ -83,8 +83,8 @@ public class SeleniumTests {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         // Scroll down the page by a specific number of pixels (e.g., 500 pixels)
-        js.executeScript("window.scrollBy(0, 500)");
-        
+        js.executeScript("window.scrollBy(0, 750)");
+
         //Select FirstName field
         signUpPage.clickFirstNameField();
 
@@ -93,5 +93,14 @@ public class SeleniumTests {
 
         //Send first name to first Name field
         signUpPage.enterFirstName(firstName);
+
+        //Select LastName field
+        signUpPage.clickLastNameField();
+
+        //Create LastName
+        String lastName = MetaDataUtility.createFirstName();
+
+        //Send last name to last Name Field
+        signUpPage.enterFirstName(lastName);
     }
 }

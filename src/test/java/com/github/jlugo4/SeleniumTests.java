@@ -94,6 +94,9 @@ public class SeleniumTests {
         //Send first name to first Name field
         signUpPage.enterFirstName(firstName);
 
+        // Scroll down the page by a specific number of pixels (e.g., 500 pixels)
+        js.executeScript("window.scrollBy(0, 750)");
+
         //Select LastName field
         signUpPage.clickLastNameField();
 
@@ -101,6 +104,6 @@ public class SeleniumTests {
         String lastName = MetaDataUtility.createFirstName();
 
         //Send last name to last Name Field
-        signUpPage.enterFirstName(lastName);
+        signUpPage.enterLastName(lastName);
     }
 }

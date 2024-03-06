@@ -10,6 +10,9 @@ public class SignUpPage {
     //Initializing PasswordField
     final private By PasswordField = By.cssSelector("input[data-qa*='password']");
 
+    //Initializing FirstNameField
+    final private By FirstNameField = By.cssSelector("input[data-qa*='first_name']");
+
     //Initializing SignUpPage
     public SignUpPage(WebDriver driver){this.driver = driver;}
 
@@ -25,5 +28,15 @@ public class SignUpPage {
         passwordField.sendKeys(password);
     }
 
+    //Selecting the FirstNameField
+    public void clickFirstNameField(){
+        driver.findElement(FirstNameField).click();
+    }
+
+    public void enterFirstName(String firstName){
+        WebElement FirstName = driver.findElement(FirstNameField);
+        FirstName.clear();
+        FirstName.sendKeys(firstName);
+    }
 
 }

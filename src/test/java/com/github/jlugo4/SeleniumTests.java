@@ -77,5 +77,14 @@ public class SeleniumTests {
 
         //Send password to Password field
         signUpPage.enterPassword(password);
+
+        //Select FirstName field
+        signUpPage.clickFirstNameField();
+
+        //Create FirstName
+        String firstName = MetaDataUtility.createFirstName();
+
+        //Send first name to first Name field
+        signUpPage.enterFirstName(firstName);
     }
 }

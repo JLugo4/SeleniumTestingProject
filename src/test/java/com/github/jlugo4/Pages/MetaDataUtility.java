@@ -28,4 +28,8 @@ public class MetaDataUtility {
     public static String createLastName(){
         return createTempName();
     }
+
+    public static String createAddress(){
+        return RandomStringUtils.randomNumeric(6) + " " + createTempName() + " Street";
+    }
 }

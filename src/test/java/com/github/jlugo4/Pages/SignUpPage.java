@@ -1,5 +1,6 @@
 package com.github.jlugo4.Pages;
 
+import org.apache.bcel.generic.Select;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -77,5 +78,8 @@ public class SignUpPage {
         driver.findElement(CountryDropDown).click();
     }
 
-
+    public void selectCountry() {
+        Select dropdown = new Select(driver.findElement(By.id("input[data-qa*='country']")));
+        dropdown.selectByIndex(index);
+    }
 }

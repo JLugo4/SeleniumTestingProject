@@ -41,29 +41,41 @@ public class SignUpPage {
         driver.findElement(FirstNameField).click();
     }
 
+    //Enter first name into first name field
     public void enterFirstName(String firstName){
         WebElement FirstName = driver.findElement(FirstNameField);
         FirstName.clear();
         FirstName.sendKeys(firstName);
     }
 
+    //Select Last name field
     public void clickLastNameField(){
         driver.findElement(LastNameField).click();
     }
 
+    //Enter last name into Last name Field
     public void enterLastName(String lastName){
         WebElement LastName = driver.findElement(LastNameField);
         LastName.clear();
         LastName.sendKeys(lastName);
     }
 
+    //Click Address field
     public void clickAddressField(){
         driver.findElement(AddressField).click();
     }
 
+    //Enter Address into Address field
     public void enterAddress(String address){
         WebElement Address = driver.findElement(AddressField);
         Address.clear();
         Address.sendKeys(address);
     }
+
+    //Click Country Drop Down Menu
+    public void clickCountry(){
+        driver.findElement(CountryDropDown).click();
+    }
+
+
 }

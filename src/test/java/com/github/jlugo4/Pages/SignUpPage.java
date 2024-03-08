@@ -78,8 +78,10 @@ public class SignUpPage {
         driver.findElement(CountryDropDown).click();
     }
 
-    public void selectCountry() {
-        Select dropdown = new Select(driver.findElement(By.id("input[data-qa*='country']")));
-        dropdown.selectByIndex(index);
-    }
+//    public void selectCountry() {
+//        Select dropdown = new Select(driver.findElement(By.id("input[data-qa*='country']")));
+//        dropdown.selectByIndex(index);
+//    }
+
+    //
 }

@@ -21,6 +21,8 @@ public class SignUpPage {
 
     final private By CountryDropDown = By.cssSelector("select[data-qa*='country']");
 
+    final private By StateField = By.cssSelector("input[data-qa*='state']");
+
     //Initializing SignUpPage
     public SignUpPage(WebDriver driver){this.driver = driver;}
 
@@ -89,5 +91,15 @@ public class SignUpPage {
         WebElement country = driver.findElement(CountryDropDown);
         country.click();
         country.sendKeys("un");
+    }
+
+    public void selectState(){
+        driver.findElement(StateField).click();
+    }
+
+    public void EnterState(String state){
+        WebElement stateField = driver.findElement(StateField);
+        stateField.clear();
+        stateField.sendKeys(state);
     }
 }

@@ -19,7 +19,7 @@ public class SignUpPage {
 
     final private By AddressField = By.cssSelector("input[data-qa*='address']");
 
-    final private By CountryDropDown = By.cssSelector("input[data-qa*='country']");
+    final private By CountryDropDown = By.cssSelector("select[data-qa*='country']");
 
     //Initializing SignUpPage
     public SignUpPage(WebDriver driver){this.driver = driver;}
@@ -78,10 +78,16 @@ public class SignUpPage {
         driver.findElement(CountryDropDown).click();
     }
 
+//TODO
 //    public void selectCountry() {
 //        Select dropdown = new Select(driver.findElement(By.id("input[data-qa*='country']")));
 //        dropdown.selectByIndex(index);
 //    }
 
-    //
+    //Send keys to drop down
+    public void selectUnitedStates(){
+        WebElement country = driver.findElement(CountryDropDown);
+        country.click();
+        country.sendKeys("un");
+    }
 }

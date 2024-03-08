@@ -117,5 +117,14 @@ public class SeleniumTests {
 
         //Enter in created address into Address Field
         signUpPage.enterAddress(address);
+
+        // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
+        js.executeScript("window.scrollBy(0, 750)");
+
+        //TODO Create Scroll method to replace Wet scroll code
+
+        //Select Country on the Country drop down menu
+        signUpPage.selectUnitedStates();
+
     }
 }

@@ -136,6 +136,18 @@ public class SeleniumTests {
         signUpPage.clickState();
 
         //Send State
-        signUpPage.EnterState(state);
+        signUpPage.enterState(state);
+
+        // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
+        js.executeScript("window.scrollBy(0, 750)");
+
+        // Create String to send to City
+        String city = "Wilmington";
+
+        //Select City
+        signUpPage.clickCity();
+
+        //Send City
+        signUpPage.enterCity(city);
     }
 }

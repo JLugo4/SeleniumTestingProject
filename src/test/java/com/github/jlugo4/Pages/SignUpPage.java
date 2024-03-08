@@ -23,6 +23,8 @@ public class SignUpPage {
 
     final private By StateField = By.cssSelector("input[data-qa*='state']");
 
+    final private By CityField = By.cssSelector("input[data-qa*='city']");
+
     //Initializing SignUpPage
     public SignUpPage(WebDriver driver){this.driver = driver;}
 
@@ -97,9 +99,19 @@ public class SignUpPage {
         driver.findElement(StateField).click();
     }
 
-    public void EnterState(String state){
+    public void enterState(String state){
         WebElement stateField = driver.findElement(StateField);
         stateField.clear();
         stateField.sendKeys(state);
+    }
+
+    public void clickCity(){
+        driver.findElement(CityField).click();
+    }
+
+    public void enterCity(String city){
+        WebElement City = driver.findElement(CityField);
+        City.clear();
+        City.sendKeys(city);
     }
 }

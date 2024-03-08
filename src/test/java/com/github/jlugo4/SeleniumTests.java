@@ -126,5 +126,16 @@ public class SeleniumTests {
         //Select Country on the Country drop down menu
         signUpPage.selectUnitedStates();
 
+        // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
+        js.executeScript("window.scrollBy(0, 750)");
+
+        // Create String to send to state
+        String state = "Delaware";
+
+        //Select State
+        signUpPage.clickState();
+
+        //Send State
+        signUpPage.EnterState(state);
     }
 }

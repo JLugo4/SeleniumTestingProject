@@ -93,7 +93,7 @@ public class SignUpPage {
         country.sendKeys("un");
     }
 
-    public void selectState(){
+    public void clickState(){
         driver.findElement(StateField).click();
     }
 

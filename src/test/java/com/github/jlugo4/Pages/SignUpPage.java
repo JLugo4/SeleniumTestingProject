@@ -28,6 +28,8 @@ public class SignUpPage {
 
     final private By ZipcodeField = By.cssSelector("input[data-qa*='zipcode']");
 
+    final private By MobileNumberField = By.cssSelector("input[data-qa*='mobile_number']");
+
     //Initializing SignUpPage
     public SignUpPage(WebDriver driver){this.driver = driver;}
 
@@ -127,4 +129,10 @@ public class SignUpPage {
         Zipcode.clear();
         Zipcode.sendKeys(zipcode);
     }
+
+    public void clickMobileNumber(){
+        driver.findElement(MobileNumberField).click();
+    }
+
+    
 }

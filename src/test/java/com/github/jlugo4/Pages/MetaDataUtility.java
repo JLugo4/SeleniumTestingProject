@@ -36,4 +36,8 @@ public class MetaDataUtility {
     public static String createZipcode(){
         return RandomStringUtils.randomNumeric(5);
     }
+
+    public static String createMobileNumber(){
+        return RandomStringUtils.randomNumeric(3) + "-" + RandomStringUtils.randomNumeric(3) + "-" + RandomStringUtils.randomNumeric(4);
+    }
 }

@@ -149,5 +149,13 @@ public class SeleniumTests {
 
         //Send City
         signUpPage.enterCity(city);
+
+        //create Zipcode
+        
+
+        //Select Zipcode
+        signUpPage.clickZipcode();
+
+        //Enter Zipcode into Zipcode Field
     }
 }

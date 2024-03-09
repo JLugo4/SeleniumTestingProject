@@ -4,6 +4,7 @@ import org.apache.bcel.generic.Select;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.io.Zip;
 
 public class SignUpPage {
     private WebDriver driver;
@@ -24,6 +25,8 @@ public class SignUpPage {
     final private By StateField = By.cssSelector("input[data-qa*='state']");
 
     final private By CityField = By.cssSelector("input[data-qa*='city']");
+
+    final private By ZipcodeField = By.cssSelector("input[data-qa*='zipcode']");
 
     //Initializing SignUpPage
     public SignUpPage(WebDriver driver){this.driver = driver;}
@@ -113,5 +116,9 @@ public class SignUpPage {
         WebElement City = driver.findElement(CityField);
         City.clear();
         City.sendKeys(city);
+    }
+
+    public void clickZipcode(){
+        driver.findElement(ZipcodeField).click();
     }
 }

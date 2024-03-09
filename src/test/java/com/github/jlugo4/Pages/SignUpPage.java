@@ -134,5 +134,9 @@ public class SignUpPage {
         driver.findElement(MobileNumberField).click();
     }
 
-    
+    public void enterMobileNumber(String mobileNumber){
+        WebElement MobileNumber = driver.findElement(MobileNumberField);
+        MobileNumber.clear();
+        MobileNumber.sendKeys(mobileNumber);
+    }
 }

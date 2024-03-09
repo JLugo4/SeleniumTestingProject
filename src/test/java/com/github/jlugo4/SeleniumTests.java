@@ -5,6 +5,7 @@ import com.github.jlugo4.Pages.LoginSignUpPage;
 import com.github.jlugo4.Pages.MetaDataUtility;
 import com.github.jlugo4.Pages.SignUpPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.JavascriptExecutor;
@@ -161,5 +162,17 @@ public class SeleniumTests {
 
         //Enter Zipcode into Zipcode Field
         signUpPage.enterZipCode(zipcode);
+
+        // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
+        js.executeScript("window.scrollBy(0, 750)");
+
+        //Create Mobile Number
+        String mobileNumber = MetaDataUtility.createMobileNumber();
+
+        //Select Mobile number field
+        signUpPage.clickMobileNumber();
+
+        //Enter created Mobile Number
+        signUpPage.enterMobileNumber(mobileNumber);
     }
 }

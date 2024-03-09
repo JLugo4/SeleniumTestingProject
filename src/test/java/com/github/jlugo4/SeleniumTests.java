@@ -150,12 +150,16 @@ public class SeleniumTests {
         //Send City
         signUpPage.enterCity(city);
 
+        // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
+        js.executeScript("window.scrollBy(0, 750)");
+
         //create Zipcode
-        
+        String zipcode = MetaDataUtility.createZipcode();
 
         //Select Zipcode
         signUpPage.clickZipcode();
 
         //Enter Zipcode into Zipcode Field
+        signUpPage.enterZipCode(zipcode);
     }
 }

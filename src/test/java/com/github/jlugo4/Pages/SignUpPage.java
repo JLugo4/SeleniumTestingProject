@@ -121,4 +121,10 @@ public class SignUpPage {
     public void clickZipcode(){
         driver.findElement(ZipcodeField).click();
     }
+
+    public void enterZipCode(String zipcode){
+        WebElement Zipcode = driver.findElement(ZipcodeField);
+        Zipcode.clear();
+        Zipcode.sendKeys(zipcode);
+    }
 }

@@ -32,4 +32,8 @@ public class MetaDataUtility {
     public static String createAddress(){
         return RandomStringUtils.randomNumeric(6) + " " + createTempName() + " Street";
     }
+
+    public static String createZipcode(){
+        return RandomStringUtils.randomNumeric(5);
+    }
 }

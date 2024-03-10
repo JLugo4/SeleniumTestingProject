@@ -174,5 +174,13 @@ public class SeleniumTests {
 
         //Enter created Mobile Number
         signUpPage.enterMobileNumber(mobileNumber);
+
+        // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
+        js.executeScript("window.scrollBy(0, 750)");
+
+        //Click Create Account
+        signUpPage.clickCreateAccountButton();
+
+        //Account Successfully Created!
     }
 }

@@ -30,6 +30,8 @@ public class SignUpPage {
 
     final private By MobileNumberField = By.cssSelector("input[data-qa*='mobile_number']");
 
+    final private By CreateAccountButton = By.cssSelector("button[data-qa*='create-account']");
+
     //Initializing SignUpPage
     public SignUpPage(WebDriver driver){this.driver = driver;}
 
@@ -139,4 +141,6 @@ public class SignUpPage {
         MobileNumber.clear();
         MobileNumber.sendKeys(mobileNumber);
     }
+
+    public void clickCreateAccountButton(){driver.findElement(CreateAccountButton).click();}
 }

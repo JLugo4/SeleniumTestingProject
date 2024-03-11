@@ -1,9 +1,6 @@
 package com.github.jlugo4;
 
-import com.github.jlugo4.Pages.LandingPage;
-import com.github.jlugo4.Pages.LoginSignUpPage;
-import com.github.jlugo4.Pages.MetaDataUtility;
-import com.github.jlugo4.Pages.SignUpPage;
+import com.github.jlugo4.Pages.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.junit.Test;
@@ -80,10 +77,11 @@ public class SignUpSmokeTest {
         signUpPage.enterPassword(password);
 
         // Create a JavascriptExecutor object
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        BrowserUtility browserUtils = new BrowserUtility(driver);
+        browserUtils.scrollDown(250);
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        js.executeScript("window.scrollBy(0, 750)");
+        browserUtils.scrollDown(750);
 
         //Select FirstName field
         signUpPage.clickFirstNameField();
@@ -95,7 +93,7 @@ public class SignUpSmokeTest {
         signUpPage.enterFirstName(firstName);
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        js.executeScript("window.scrollBy(0, 750)");
+        browserUtils.scrollDown(750);
 
         //Select LastName field
         signUpPage.clickLastNameField();
@@ -107,7 +105,7 @@ public class SignUpSmokeTest {
         signUpPage.enterLastName(lastName);
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        js.executeScript("window.scrollBy(0, 750)");
+        browserUtils.scrollDown(750);
 
         //Create Address
         String address = MetaDataUtility.createAddress();
@@ -119,7 +117,7 @@ public class SignUpSmokeTest {
         signUpPage.enterAddress(address);
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        js.executeScript("window.scrollBy(0, 750)");
+        browserUtils.scrollDown(750);
 
         //TODO Create Scroll method to replace Wet scroll code
 
@@ -127,7 +125,7 @@ public class SignUpSmokeTest {
         signUpPage.selectUnitedStates();
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        js.executeScript("window.scrollBy(0, 750)");
+        browserUtils.scrollDown(750);
 
         // Create String to send to state
         String state = "Delaware";
@@ -139,7 +137,7 @@ public class SignUpSmokeTest {
         signUpPage.enterState(state);
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        js.executeScript("window.scrollBy(0, 750)");
+        browserUtils.scrollDown(750);
 
         // Create String to send to City
         String city = "Wilmington";
@@ -151,7 +149,7 @@ public class SignUpSmokeTest {
         signUpPage.enterCity(city);
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        js.executeScript("window.scrollBy(0, 750)");
+        browserUtils.scrollDown(750);
 
         //create Zipcode
         String zipcode = MetaDataUtility.createZipcode();
@@ -163,7 +161,7 @@ public class SignUpSmokeTest {
         signUpPage.enterZipCode(zipcode);
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        js.executeScript("window.scrollBy(0, 750)");
+        browserUtils.scrollDown(750);
 
         //Create Mobile Number
         String mobileNumber = MetaDataUtility.createMobileNumber();
@@ -175,7 +173,7 @@ public class SignUpSmokeTest {
         signUpPage.enterMobileNumber(mobileNumber);
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        js.executeScript("window.scrollBy(0, 750)");
+        browserUtils.scrollDown(750);
 
         //Click Create Account
         signUpPage.clickCreateAccountButton();

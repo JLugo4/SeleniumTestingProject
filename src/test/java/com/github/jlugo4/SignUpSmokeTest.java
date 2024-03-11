@@ -5,14 +5,13 @@ import com.github.jlugo4.Pages.LoginSignUpPage;
 import com.github.jlugo4.Pages.MetaDataUtility;
 import com.github.jlugo4.Pages.SignUpPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class SeleniumTests {
+public class SignUpSmokeTest {
 
     //Regression
     //Smoke Test

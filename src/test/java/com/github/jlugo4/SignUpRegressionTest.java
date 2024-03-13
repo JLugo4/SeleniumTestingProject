@@ -63,6 +63,9 @@ public class SignUpRegressionTest {
         //Instantiate SignUpPage
         final SignUpPage signUpPage = new SignUpPage(driver);
 
+        //Select Gender(Male)
+        signUpPage.clickGenderMr();
+
         //Select Password Field
         signUpPage.clickPassWordField();
 

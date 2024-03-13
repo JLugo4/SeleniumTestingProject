@@ -9,6 +9,9 @@ import org.openqa.selenium.io.Zip;
 public class SignUpPage {
     private WebDriver driver;
 
+    //Initializing Gender Selection(Male)
+    final private By GenderInput = By.cssSelector("input[value*='Mr']");
+
     //Initializing PasswordField
     final private By PasswordField = By.cssSelector("input[data-qa*='password']");
 
@@ -17,6 +20,12 @@ public class SignUpPage {
 
     //Initializing LastNameField
     final private By LastNameField = By.cssSelector("input[data-qa*='last_name']");
+
+    final private By DaysDropDown = By.cssSelector("select[data-qa*='days']");
+
+    final private By MonthsDropDown = By.cssSelector("select[data-qa*='months']");
+
+    final private By YearsDropDown = By.cssSelector("select[data-qa*='years']");
 
     final private By AddressField = By.cssSelector("input[data-qa*='address']");
 
@@ -143,4 +152,8 @@ public class SignUpPage {
     }
 
     public void clickCreateAccountButton(){driver.findElement(CreateAccountButton).click();}
+
+    public void clickGenderMr(){
+        driver.findElement(GenderInput).click();
+    }
 }

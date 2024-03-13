@@ -100,6 +100,15 @@ public class SignUpRegressionTest {
         //Click to close drop down bar
         signUpPage.clickMonths();
 
+        //Click Year of Birth
+        signUpPage.clickYears();
+
+        //Enter a Year
+        signUpPage.enterYearInYears();
+
+        //Click to close drop down bar
+        signUpPage.clickYears();
+
         //Select FirstName field
         signUpPage.clickFirstNameField();
 

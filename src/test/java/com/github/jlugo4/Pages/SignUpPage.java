@@ -171,7 +171,16 @@ public class SignUpPage {
     }
 
     public void enterMonthInMonths(){
-        WebElement Days = driver.findElement(MonthsDropDown);
-        Days.sendKeys("March");
+        WebElement Months = driver.findElement(MonthsDropDown);
+        Months.sendKeys("March");
+    }
+
+    public void clickYears(){
+        driver.findElement(YearsDropDown).click();
+    }
+
+    public void enterYearInYears(){
+        WebElement Years = driver.findElement(YearsDropDown);
+        Years.sendKeys("2000");
     }
 }

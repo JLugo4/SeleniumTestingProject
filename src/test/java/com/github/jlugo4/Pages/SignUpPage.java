@@ -156,4 +156,13 @@ public class SignUpPage {
     public void clickGenderMr(){
         driver.findElement(GenderInput).click();
     }
+
+    public void clickDays(){
+        driver.findElement(DaysDropDown).click();
+    }
+
+    public void enterDateInDays(){
+        WebElement Days = driver.findElement(DaysDropDown);
+        Days.sendKeys("4");
+    }
 }

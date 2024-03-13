@@ -82,6 +82,15 @@ public class SignUpRegressionTest {
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
         browserUtils.scrollDown(750);
 
+        //Date of Birth selection
+        signUpPage.clickDays();
+
+        //Send Date to days
+        signUpPage.enterDateInDays();
+
+        //Click to close drop down bar
+        signUpPage.clickDays();
+
         //Select FirstName field
         signUpPage.clickFirstNameField();
 

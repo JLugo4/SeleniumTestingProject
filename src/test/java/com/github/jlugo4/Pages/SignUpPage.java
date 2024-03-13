@@ -27,6 +27,10 @@ public class SignUpPage {
 
     final private By YearsDropDown = By.cssSelector("select[data-qa*='years']");
 
+    final private By NewsLetterInput = By.cssSelector("input[name*='newsletter']");
+
+    final private By OptinInput = By.cssSelector("input[name*='optin']");
+
     final private By AddressField = By.cssSelector("input[data-qa*='address']");
 
     final private By CountryDropDown = By.cssSelector("select[data-qa*='country']");
@@ -182,5 +186,13 @@ public class SignUpPage {
     public void enterYearInYears(){
         WebElement Years = driver.findElement(YearsDropDown);
         Years.sendKeys("2000");
+    }
+
+    public void clickNewsletter(){
+        driver.findElement(NewsLetterInput).click();
+    }
+
+    public void clickOptin(){
+        driver.findElement(OptinInput).click();
     }
 }

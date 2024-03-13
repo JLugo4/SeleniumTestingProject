@@ -21,6 +21,8 @@ public class SignUpPage {
     //Initializing LastNameField
     final private By LastNameField = By.cssSelector("input[data-qa*='last_name']");
 
+    final private By CompanyField = By.cssSelector("input[data-qa*='company']");
+
     final private By DaysDropDown = By.cssSelector("select[data-qa*='days']");
 
     final private By MonthsDropDown = By.cssSelector("select[data-qa*='months']");
@@ -194,5 +196,15 @@ public class SignUpPage {
 
     public void clickOptin(){
         driver.findElement(OptinInput).click();
+    }
+
+    public void clickCompany(){
+        driver.findElement(CompanyField).click();
+    }
+
+    public void enterCompany(String company){
+        WebElement companyField = driver.findElement(CompanyField);
+        companyField.clear();
+        companyField.sendKeys(company);
     }
 }

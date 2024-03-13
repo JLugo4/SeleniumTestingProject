@@ -141,7 +141,14 @@ public class SignUpRegressionTest {
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
         browserUtils.scrollDown(750);
 
+        //Click company
+        signUpPage.clickCompany();
 
+        //create Company
+        String company = MetaDataUtility.createCompany();
+
+        //Enter Company
+        signUpPage.enterCompany(company);
 
         //Create Address
 //        String address = MetaDataUtility.createAddress();

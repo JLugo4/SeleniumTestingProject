@@ -40,4 +40,8 @@ public class MetaDataUtility {
     public static String createMobileNumber(){
         return RandomStringUtils.randomNumeric(3) + "-" + RandomStringUtils.randomNumeric(3) + "-" + RandomStringUtils.randomNumeric(4);
     }
+
+    public static String createCompany(){
+        return "TestingCompany";
+    }
 }

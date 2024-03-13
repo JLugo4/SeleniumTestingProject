@@ -35,6 +35,8 @@ public class SignUpPage {
 
     final private By AddressField = By.cssSelector("input[data-qa*='address']");
 
+    final private By Address2Field = By.cssSelector("input[data-qa*='address2']");
+
     final private By CountryDropDown = By.cssSelector("select[data-qa*='country']");
 
     final private By StateField = By.cssSelector("input[data-qa*='state']");
@@ -97,6 +99,17 @@ public class SignUpPage {
         WebElement Address = driver.findElement(AddressField);
         Address.clear();
         Address.sendKeys(address);
+    }
+
+    public void clickAddress2Field(){
+        driver.findElement(Address2Field).click();
+    }
+
+    //Enter Address into Address field
+    public void enterAddress2(String address2){
+        WebElement Address2 = driver.findElement(Address2Field);
+        Address2.clear();
+        Address2.sendKeys(address2);
     }
 
     //Click Country Drop Down Menu

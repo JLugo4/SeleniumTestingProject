@@ -119,7 +119,6 @@ public class SignUpSmokeTest {
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
         browserUtils.scrollDown(750);
 
-        //TODO Create Scroll method to replace Wet scroll code
 
         //Select Country on the Country drop down menu
         signUpPage.selectUnitedStates();

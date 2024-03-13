@@ -104,75 +104,75 @@ public class SignUpRegressionTest {
         browserUtils.scrollDown(750);
 
         //Create Address
-        String address = MetaDataUtility.createAddress();
+//        String address = MetaDataUtility.createAddress();
 
         //Select Address field
-        signUpPage.clickAddressField();
+//        signUpPage.clickAddressField();
 
         //Enter in created address into Address Field
-        signUpPage.enterAddress(address);
+//        signUpPage.enterAddress(address);
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        browserUtils.scrollDown(750);
+//        browserUtils.scrollDown(750);
 
         //TODO Create Scroll method to replace Wet scroll code
 
         //Select Country on the Country drop down menu
-        signUpPage.selectUnitedStates();
+//        signUpPage.selectUnitedStates();
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        browserUtils.scrollDown(750);
+//        browserUtils.scrollDown(750);
 
         // Create String to send to state
-        String state = "Delaware";
+//        String state = "Delaware";
 
         //Select State
-        signUpPage.clickState();
+//        signUpPage.clickState();
 
         //Send State
-        signUpPage.enterState(state);
+//        signUpPage.enterState(state);
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        browserUtils.scrollDown(750);
+//        browserUtils.scrollDown(750);
 
         // Create String to send to City
-        String city = "Wilmington";
+//        String city = "Wilmington";
 
         //Select City
-        signUpPage.clickCity();
+//        signUpPage.clickCity();
 
         //Send City
-        signUpPage.enterCity(city);
+//        signUpPage.enterCity(city);
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        browserUtils.scrollDown(750);
+//        browserUtils.scrollDown(750);
 
         //create Zipcode
-        String zipcode = MetaDataUtility.createZipcode();
+//        String zipcode = MetaDataUtility.createZipcode();
 
         //Select Zipcode
-        signUpPage.clickZipcode();
+//        signUpPage.clickZipcode();
 
         //Enter Zipcode into Zipcode Field
-        signUpPage.enterZipCode(zipcode);
+//        signUpPage.enterZipCode(zipcode);
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        browserUtils.scrollDown(750);
+//        browserUtils.scrollDown(750);
 
         //Create Mobile Number
-        String mobileNumber = MetaDataUtility.createMobileNumber();
+//        String mobileNumber = MetaDataUtility.createMobileNumber();
 
         //Select Mobile number field
-        signUpPage.clickMobileNumber();
+//        signUpPage.clickMobileNumber();
 
         //Enter created Mobile Number
-        signUpPage.enterMobileNumber(mobileNumber);
+//        signUpPage.enterMobileNumber(mobileNumber);
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        browserUtils.scrollDown(750);
+//        browserUtils.scrollDown(750);
 
         //Click Create Account
-        signUpPage.clickCreateAccountButton();
+//        signUpPage.clickCreateAccountButton();
 
         //Account Successfully Created!
     }}

@@ -165,4 +165,13 @@ public class SignUpPage {
         WebElement Days = driver.findElement(DaysDropDown);
         Days.sendKeys("4");
     }
+
+    public void clickMonths(){
+        driver.findElement(MonthsDropDown).click();
+    }
+
+    public void enterMonthInMonths(){
+        WebElement Days = driver.findElement(MonthsDropDown);
+        Days.sendKeys("March");
+    }
 }

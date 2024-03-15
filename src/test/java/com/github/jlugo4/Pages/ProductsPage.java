@@ -12,6 +12,9 @@ public class ProductsPage {
     //Search bar
     final private By SearchBar = By.cssSelector("input[id*='search_product']");
 
+    //sumbit search
+    final private By SubmitSearch = By.cssSelector("button[id*='_submit_search']");
+
 
     //click Search bar
     public void clickSearchProduct(){
@@ -26,7 +29,9 @@ public class ProductsPage {
         searchSweater.sendKeys("sweater");
     }
 
-    
+    public void clickSubmitSearch(){
+        driver.findElement(SubmitSearch).click();
+    }
 
 
 }

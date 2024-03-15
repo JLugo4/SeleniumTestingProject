@@ -1,6 +1,7 @@
 package com.github.jlugo4;
 
 import com.github.jlugo4.Pages.LandingPage;
+import com.github.jlugo4.Pages.ProductsPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -24,5 +25,16 @@ public class ShoppingSmokeTest {
 
         //Click the products link
         landingPage.clickProducts();
+
+        final ProductsPage productsPage = new ProductsPage(driver);
+
+        //Click search
+        productsPage.clickSearchProduct();
+
+        //Search sweater
+        productsPage.searchForSweater();
+
+        //submit search
+        productsPage.clickSubmitSearch();
     }
 }

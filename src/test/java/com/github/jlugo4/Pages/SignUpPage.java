@@ -21,28 +21,40 @@ public class SignUpPage {
     //Initializing LastNameField
     final private By LastNameField = By.cssSelector("input[data-qa*='last_name']");
 
+    //Initializing CompanyField
     final private By CompanyField = By.cssSelector("input[data-qa*='company']");
 
+    //Initializing DaysDrownDownList
     final private By DaysDropDown = By.cssSelector("select[data-qa*='days']");
 
+    //Initializing MonthsDropDownList
     final private By MonthsDropDown = By.cssSelector("select[data-qa*='months']");
 
+    //Initializing YearsDropDownList
     final private By YearsDropDown = By.cssSelector("select[data-qa*='years']");
 
+    //Initializing NewsLetterInputBox
     final private By NewsLetterInput = By.cssSelector("input[name*='newsletter']");
 
+    //Initializing OptinInputBox
     final private By OptinInput = By.cssSelector("input[name*='optin']");
 
+    //Initializing AddressField
     final private By AddressField = By.cssSelector("input[data-qa*='address']");
 
+    //Initializing Address2Field
     final private By Address2Field = By.cssSelector("input[data-qa*='address2']");
 
+    //Initializing CountryDropDownList
     final private By CountryDropDown = By.cssSelector("select[data-qa*='country']");
 
+    //Initializing StateField
     final private By StateField = By.cssSelector("input[data-qa*='state']");
 
+    //Initializing CityField
     final private By CityField = By.cssSelector("input[data-qa*='city']");
 
+    //Initializing ZipCodeField
     final private By ZipcodeField = By.cssSelector("input[data-qa*='zipcode']");
 
     final private By MobileNumberField = By.cssSelector("input[data-qa*='mobile_number']");

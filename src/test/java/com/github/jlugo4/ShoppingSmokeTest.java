@@ -36,5 +36,8 @@ public class ShoppingSmokeTest {
 
         //submit search
         productsPage.clickSubmitSearch();
+
+        //no sweater found, let's look at the polos
+        productsPage.clickPolo();
     }
 }

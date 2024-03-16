@@ -12,9 +12,11 @@ public class ProductsPage {
     //Search bar
     final private By SearchBar = By.cssSelector("input[id*='search_product']");
 
-    //sumbit search
-    final private By SubmitSearch = By.cssSelector("button[id*='_submit_search']");
+    //submit search
+    final private By SubmitSearch = By.cssSelector("button[id*='submit_search']");
 
+    //Polo button
+    final private By PoloCategory = By.cssSelector("a[href*='/brand_products/Polo']");
 
     //click Search bar
     public void clickSearchProduct(){
@@ -31,6 +33,10 @@ public class ProductsPage {
 
     public void clickSubmitSearch(){
         driver.findElement(SubmitSearch).click();
+    }
+
+    public void clickPolo(){
+        driver.findElement(PoloCategory).click();
     }
 
 

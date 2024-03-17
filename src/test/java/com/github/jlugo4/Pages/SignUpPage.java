@@ -57,8 +57,10 @@ public class SignUpPage {
     //Initializing ZipCodeField
     final private By ZipcodeField = By.cssSelector("input[data-qa*='zipcode']");
 
+    //Initializing MobileNumberField
     final private By MobileNumberField = By.cssSelector("input[data-qa*='mobile_number']");
 
+    //Initializing CreateAccountButton
     final private By CreateAccountButton = By.cssSelector("button[data-qa*='create-account']");
 
     //Initializing SignUpPage
@@ -142,46 +144,55 @@ public class SignUpPage {
         country.sendKeys("un");
     }
 
+    // Click the state field
     public void clickState(){
         driver.findElement(StateField).click();
     }
 
+    // Choose state
     public void enterState(String state){
         WebElement stateField = driver.findElement(StateField);
         stateField.clear();
         stateField.sendKeys(state);
     }
 
+    // Click the city field
     public void clickCity(){
         driver.findElement(CityField).click();
     }
 
+    //Enter the city
     public void enterCity(String city){
         WebElement City = driver.findElement(CityField);
         City.clear();
         City.sendKeys(city);
     }
 
+    // Click ZipCode field
     public void clickZipcode(){
         driver.findElement(ZipcodeField).click();
     }
 
+    //Enter the zip code
     public void enterZipCode(String zipcode){
         WebElement Zipcode = driver.findElement(ZipcodeField);
         Zipcode.clear();
         Zipcode.sendKeys(zipcode);
     }
 
+    //Click mobile number field
     public void clickMobileNumber(){
         driver.findElement(MobileNumberField).click();
     }
 
+    // Enter the mobile number into the field
     public void enterMobileNumber(String mobileNumber){
         WebElement MobileNumber = driver.findElement(MobileNumberField);
         MobileNumber.clear();
         MobileNumber.sendKeys(mobileNumber);
     }
 
+    //Click the create Account button
     public void clickCreateAccountButton(){driver.findElement(CreateAccountButton).click();}
 
     public void clickGenderMr(){

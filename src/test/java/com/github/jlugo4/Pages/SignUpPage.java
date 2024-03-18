@@ -195,49 +195,60 @@ public class SignUpPage {
     //Click the create Account button
     public void clickCreateAccountButton(){driver.findElement(CreateAccountButton).click();}
 
+    // Click the Gender box
     public void clickGenderMr(){
         driver.findElement(GenderInput).click();
     }
 
+    // Click Days
     public void clickDays(){
         driver.findElement(DaysDropDown).click();
     }
 
+    // Send Keys to get date
     public void enterDateInDays(){
         WebElement Days = driver.findElement(DaysDropDown);
         Days.sendKeys("4");
     }
 
+    //Click months list
     public void clickMonths(){
         driver.findElement(MonthsDropDown).click();
     }
 
+    //Send keys to get month
     public void enterMonthInMonths(){
         WebElement Months = driver.findElement(MonthsDropDown);
         Months.sendKeys("March");
     }
 
+    //click years
     public void clickYears(){
         driver.findElement(YearsDropDown).click();
     }
 
+    //Enter year into years
     public void enterYearInYears(){
         WebElement Years = driver.findElement(YearsDropDown);
         Years.sendKeys("2000");
     }
 
+    //Click newsletter
     public void clickNewsletter(){
         driver.findElement(NewsLetterInput).click();
     }
 
+    //Click optin
     public void clickOptin(){
         driver.findElement(OptinInput).click();
     }
 
+    //Click company
     public void clickCompany(){
         driver.findElement(CompanyField).click();
     }
 
+    //Enter company
     public void enterCompany(String company){
         WebElement companyField = driver.findElement(CompanyField);
         companyField.clear();

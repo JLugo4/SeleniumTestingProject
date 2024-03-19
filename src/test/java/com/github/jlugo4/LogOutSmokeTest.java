@@ -7,11 +7,11 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class SignUpRegressionTest {
+public class LogOutSmokeTest {
 
     @Test
-    public void signUpRegressionTest(){
-        //Sign Up Regression Test
+    public void LogOutTest(){
+        //Log Out Smoke Test
 // Use WebDriver to manage FireFox
         WebDriverManager.firefoxdriver().setup();
 
@@ -234,6 +234,6 @@ public class SignUpRegressionTest {
         //Click Create Account
         signUpPage.clickCreateAccountButton();
 
-        //Account Successfully Created!
+
     }
 }

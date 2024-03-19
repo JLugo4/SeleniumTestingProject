@@ -10,5 +10,9 @@ public class AccountCreatedPage {
     // Initialize AccountCreatedPage Web Driver
     public AccountCreatedPage(WebDriver driver){this.driver = driver;}
 
-    private By signUpLink = By.cssSelector("a[href*='/login']");
+    private By continuteButton = By.cssSelector("a[href*='/continue-button']");
+
+    public void clickContinueButton(){
+        driver.findElement(continuteButton).click();
+    }
 }

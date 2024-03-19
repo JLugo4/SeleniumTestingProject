@@ -241,5 +241,10 @@ public class LogOutSmokeTest {
 
         //click continue
         accountCreatedPage.clickContinueButton();
+
+        //click logOut
+        landingPage.clickLogOut();
+
+        //Login and Log out successful
     }
 }

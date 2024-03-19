@@ -8,6 +8,9 @@ public class LandingPage {
     //Initialize signUpLink
     private By signUpLink = By.cssSelector("a[href*='/login']");
 
+    //InitializeLogout
+    private By logoutLink = By.cssSelector("a[href*='/logout']");
+
     //Initialize ProductsLink
     private By productsLink = By.cssSelector("a[href*='/products']");
 
@@ -25,5 +28,10 @@ public class LandingPage {
     // click productsLink
     public void clickProducts(){
         driver.findElement(productsLink).click();
+    }
+
+    //click logOut
+    public void clickLogOut(){
+        driver.findElement(logoutLink).click();
     }
 }

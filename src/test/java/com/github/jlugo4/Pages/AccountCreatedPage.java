@@ -10,7 +10,7 @@ public class AccountCreatedPage {
     // Initialize AccountCreatedPage Web Driver
     public AccountCreatedPage(WebDriver driver){this.driver = driver;}
 
-    private By continuteButton = By.cssSelector("a[href*='/continue-button']");
+    private final By continuteButton = By.cssSelector("a[data-qa*='continue-button']");
 
     public void clickContinueButton(){
         driver.findElement(continuteButton).click();

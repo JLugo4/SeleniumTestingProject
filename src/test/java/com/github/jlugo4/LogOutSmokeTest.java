@@ -63,6 +63,12 @@ public class LogOutSmokeTest {
         //Instantiate SignUpPage
         final SignUpPage signUpPage = new SignUpPage(driver);
 
+        // Create a JavascriptExecutor object
+        BrowserUtility browserUtils = new BrowserUtility(driver);
+
+        //Scroll
+        browserUtils.scrollDown(250);
+
         //Select Gender(Male)
         signUpPage.clickGenderMr();
 
@@ -74,10 +80,6 @@ public class LogOutSmokeTest {
 
         //Send password to Password field
         signUpPage.enterPassword(password);
-
-        // Create a JavascriptExecutor object
-        BrowserUtility browserUtils = new BrowserUtility(driver);
-        browserUtils.scrollDown(250);
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
         browserUtils.scrollDown(750);
@@ -234,6 +236,10 @@ public class LogOutSmokeTest {
         //Click Create Account
         signUpPage.clickCreateAccountButton();
 
+        //Instantiate AccountCreatedPage
+        final AccountCreatedPage accountCreatedPage = new AccountCreatedPage(driver);
 
+        //click continue
+        accountCreatedPage.clickContinueButton();
     }
 }

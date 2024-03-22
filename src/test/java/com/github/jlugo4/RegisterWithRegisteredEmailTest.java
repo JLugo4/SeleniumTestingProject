@@ -253,7 +253,8 @@ public class RegisterWithRegisteredEmailTest {
             // If pop-up doesn't appear within 10 seconds or if there's an error, ignore and continue
             e.printStackTrace();
         }
-        //click continue
+
+        // click continue
         accountCreatedPage.clickContinueButton();
 
         // Handle pop-up (assuming it has a close button with ID 'closeBtn')
@@ -269,7 +270,7 @@ public class RegisterWithRegisteredEmailTest {
             e.printStackTrace();
         }
 
-        //click logOut
+        // click logOut
         landingPage.clickLogOut();
 
 

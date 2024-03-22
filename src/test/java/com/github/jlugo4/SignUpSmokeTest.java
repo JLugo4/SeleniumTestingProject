@@ -64,6 +64,11 @@ public class SignUpSmokeTest {
         //Select and Click Sign up Button
         loginSignUpPage.clickSignUpButton();
 
+        //Test URL Location
+        String actual_URL1 = driver.getCurrentUrl();
+        String expected_URL1 = "https://automationexercise.com/signup";
+        Assert.assertEquals(expected_URL, actual_URL);
+
         //Instantiate SignUpPage
         final SignUpPage signUpPage = new SignUpPage(driver);
 
@@ -81,7 +86,7 @@ public class SignUpSmokeTest {
         browserUtils.scrollDown(250);
 
         // Scroll down the page by a specific number of pixels (e.g., 750 pixels)
-        browserUtils.scrollDown(750);
+        browserUtils.scrollDown(500);
 
         //Select FirstName field
         signUpPage.clickFirstNameField();
